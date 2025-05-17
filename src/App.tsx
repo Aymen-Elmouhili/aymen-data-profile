@@ -9,6 +9,11 @@ import NotFound from "./pages/NotFound";
 // Create a client
 const queryClient = new QueryClient();
 
+// Définir le chemin de base pour GitHub Pages
+const basePath = process.env.NODE_ENV === 'production'
+  ? '/' // Ajustez ceci selon le nom de votre dépôt GitHub si nécessaire
+  : '/';
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <Toaster />
