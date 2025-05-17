@@ -1,5 +1,5 @@
 
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
@@ -23,11 +23,13 @@ const NotFound = () => {
           La page que vous recherchez n'existe pas ou a été déplacée.
         </p>
         <Button 
-          onClick={() => window.location.href = '/'}
+          asChild
           className="flex items-center gap-2"
         >
-          <Home className="w-4 h-4" />
-          Retour à l'accueil
+          <Link to="/">
+            <Home className="w-4 h-4" />
+            Retour à l'accueil
+          </Link>
         </Button>
       </div>
     </div>
