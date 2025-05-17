@@ -19,15 +19,15 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   };
 
   return (
-    <div className={`mb-10 ${alignmentClasses[align]}`}>
-      <h2 className="text-3xl font-bold text-portfolio-primary">
+    <div className={`mb-12 ${alignmentClasses[align]}`}>
+      <h2 className="text-3xl md:text-4xl font-bold text-portfolio-primary">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-2 text-muted-foreground">{subtitle}</p>
+        <p className="mt-3 text-lg text-muted-foreground max-w-3xl mx-auto">{subtitle}</p>
       )}
       <div 
-        className={`mt-2 h-1 w-20 bg-portfolio-accent rounded ${
+        className={`mt-4 h-1.5 w-24 bg-portfolio-accent rounded ${
           align === 'center' ? 'mx-auto' : align === 'right' ? 'ml-auto' : ''
         }`} 
       />

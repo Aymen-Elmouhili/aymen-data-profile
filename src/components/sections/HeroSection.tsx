@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 interface HeroSectionProps {
   setActiveSection: React.Dispatch<React.SetStateAction<string>>;
@@ -21,7 +22,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection }) => {
       id="home" 
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-white to-portfolio-light"
     >
-      <div className="animate-stagger">
+      <div className="animate-stagger flex flex-col items-center">
+        <Avatar className="w-40 h-40 mb-6 border-4 border-portfolio-primary shadow-xl">
+          <AvatarImage src="/lovable-uploads/05faebb1-13d6-46fd-b84d-dff8a13065bf.png" alt="Aymen El Mouhili" />
+          <AvatarFallback className="text-2xl bg-portfolio-light text-portfolio-primary">AEM</AvatarFallback>
+        </Avatar>
+        
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-portfolio-primary">
           Aymen El Mouhili
         </h1>
